@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+  <link href="styles/common1.css" rel="stylesheet" type="text/css">
+  <style>
+    .topright .signin{ width:51px; border-right:1px solid #cdcdcd;}
+    .bannerbox{ width:100%; height:320px; position:relative; overflow:hidden;}
+    .banner{ width:2500px; height:320px; position:absolute; left:50%; margin-left:-1250px; background:url(imgs/icons/a01.png) no-repeat;}
+    .Raisemoney,.Investmentmoney,.peoplename,.Counterrate{ font-size:20px;}
+
+    .statisticsbox{
+      overflow:hidden;
+      margin:auto;
+      height: 200px;
+      padding-top: 40px;
+      padding-left: 95px;
+      margin-bottom:40px;
+      background-color: #ffffff;
+    }
+
+    .raisebox,.investmentbox,.peoplenamebox,.counterbox{ float:left;}
+    .raisebox,.investmentbox,.peoplenamebox{margin-right:100px;}
+    .raisebox{ padding-left:128px;}
+    .raiseicon{ width:74px; height:74px; background:url(imgs/icons/a02.png) no-repeat; margin-left:45px;}
+    .investmenticon{ width:74px; height:74px; background:url(imgs/icons/a03.png) no-repeat; margin-left:40px;}
+    .peoplenameicon{ width:74px; height:74px; background:url(imgs/icons/a04.png) no-repeat; margin-left:15px;}
+    .Countericon{ width:74px; height:74px; background:url(imgs/icons/a05.png) no-repeat; margin-left:8px;}
+    .r_cumulative{ margin-left:20px;}
+    .i_cumulative{ margin-left:9px;}
+    .p_cumulative{ margin-left:-7px;}
+    .Counterrate{ margin-left:24px;}
+    .Raisemoney,.Investmentmoney,.peoplename,.Counterrate{ margin-top:20px;}
+    .r_cumulative,.i_cumulative,.p_cumulative,.c_cumulative{ margin-top:2px;}
+    .contentbigbox{  margin:0 auto; overflow:hidden;}
+
+    .arrangeleft{
+      background-color:#FFF;
+      border:#e2e2e2 1px solid;
+      padding-bottom:60px;
+      margin: 0 auto;
+    }
+
+    .contentright{ float:right;}
+
+    .box{
+      width:1000px;
+      border-bottom:#e2e2e2 1px solid;
+      overflow:hidden;
+      margin-top:20px;
+      margin-left: 170px;
+    }
+
+    .saleleft{ float:left; margin-left:20px;}
+    .saleright1{ float:right; margin-right:25px;}
+    .ticketname1{ font-size:18px; padding-left:35px; margin-bottom:15px; background:url(imgs/icons/a06.png) no-repeat left center;}
+    .ticketcontent{ overflow:hidden; padding-left:35px; margin-bottom:20px;}
+    .yield,.financingmoney{ float:left; margin-right:75px;}
+    .timelimit{ float:left;}
+    .yield{ width:104px;}
+    .financingmoney{ width:134px;}
+    .timelimit{ width:50px;}
+    .yieldname{ color:#ea544a; font-size:30px; margin-top:2px;}
+    .yieldname span{color:#ea544a;}
+    .financingname,.timelimitname{ font-size:18px; margin-top:14px;}
+
+    .saletime1{
+      display:inline-block;
+      color:#a8a7a7;
+      position: relative;
+      right: 90px;
+      top: 18px;
+    }
+
+    .saleicon1{
+      display:inline-block;
+      width:134px;
+      height:32px;
+      background-image:url(imgs/icons/a08.png);
+      position: relative;
+      top: 23px;
+    }
+
+    .ticketname2{
+      font-size:18px;
+      padding-left:35px;
+      margin-bottom:15px;
+      background:url(imgs/icons/a07.png) no-repeat left center;
+    }
+
+    .saleicon2{
+      display:inline-block;
+      width:134px;
+      height:32px;
+      background-image:url(imgs/icons/a09.png);
+    }
+
+    .saleicon2:hover{ background-image:url(imgs/icons/a09a.png);}
+    .saleicon2:hover{ background-image:url(imgs/icons/a09a.png);}
+
+    .slidingblock{
+      display:inline-block;
+      width:134px;
+      height:6px;
+      border-radius:3px;
+      margin-bottom:9px;
+      background:url(imgs/icons/a11.png) no-repeat -50px 0 #c9c9c9;
+    }
+
+    .saletime2{
+      color:#a8a7a7;
+      margin-bottom:4px;
+      margin-left:29px;
+    }
+
+    .saleright2{
+
+      float:right;
+      margin-top:20px;
+      margin-right:25px;
+    }
+
+    .checkmone{
+      display:block;
+      width:260px;
+      height:32px;
+      font-size:16px;
+      border:#474e5d 1px solid;
+      line-height:32px;
+      text-align:center;
+      border-radius:4px;
+      margin-top:33px;
+      margin-left:520px;
+    }
+
+    .checkmone:hover{ cursor:pointer; border:#FFF 1px solid; background-color:#ef948e; color:#FFF;}
+
+    .financialproducts,.notice{
+      font-size:28px;
+      margin-bottom:10px;
+      margin-left: 600px;
+    }
+
+    .noticeboard{
+      float: left;
+      padding-bottom:45px;
+      margin-top:30px;
+      margin-right: 260px;
+    }
+
+    .noticeboard1{
+      float: right;
+      padding-bottom:45px;
+      margin-top:30px;
+      margin-right: 120px;
+    }
+
+
+    .company{ float:left; font-size:18px; padding-left:28px;  margin-bottom:4px; background:url(imgs/icons/a12.png) no-repeat left center;}
+    .dt1,.dt2,.dt3,.dt4,.dt5{
+      display:block;
+      margin: 18px 0 4px 26px;
+      padding-left:18px;
+      background:url(imgs/icons/a14.png) no-repeat left center;
+      border-bottom: #e2e2e2 solid 1px ;
+      padding-bottom: 6px;
+    }
+
+    .mone{
+      float:right;
+      margin-top:3px;
+      color:#999999;
+    }
+
+    .dynamic{
+      width:400px;
+      border-bottom:#e2e2e2 1px solid;
+      margin-left:22px;
+      margin-top:18px;
+      overflow:hidden;
+    }
+
+    .news a:hover{ color:#ea544a;}
+    .question{float:left; font-size:18px; padding-left:33px;  margin-bottom:4px; background:url(imgs/icons/a13.png) no-repeat left center;}
+
+    .footbox{ background-color:#555555; width:100%;}
+    .foot{background-color:#555555; padding-bottom:20px;}
+
+    .whiteblock{width:100%; height:90px; background-color:#f1f1f1;}
+  </style>
+  <meta charset="utf-8">
+  <title>首页</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="header">
+  <div class="topbox"><!--顶部-->
+    <div class="top">
+      <div class="topleft">
+        <div class="consultation">咨询热线：0000-000000</div>
+        <div class="weixin"></div>
+        <div class="weibo"></div>
+      </div>
+      <div class="topright">
+        <a class="signin" href="登录.html">登录</a>
+        <a class="registered" href="注册.html">注册</a>
+        <a class="topjiaoyi" href="登录.html">我的交易</a>
+        <a class="topzhanghu" href="登录.html">我的账户</a>
+        <a class="topbangzhu" href="帮助中心（名词解释）（未登录）.html">帮助中心</a>
+        <a class="topwomen" href="关于我们（公司简介）（未登录）.html">关于我们</a>
+      </div>
+    </div>
+  </div>
+  <div class="navbox"><!--导航-->
+    <div class="nav">
+      <div class="logo">logo</div>
+      <a class="homepage" href="">首页</a>
+      <a class="ticketbill" href="产品列表（未登录）.html">票据理财</a>
+    </div>
+  </div>
+</div>
+  <div class="page">
+    <div class="bannerbox">
+      <div class="banner"></div>
+    </div>
+    <div class="statisticsbox">
+      <div class="raisebox">
+        <div class="raiseicon"></div>
+        <div class="Raisemoney">￥87,396,848.00<span>元</span></div>
+        <div class="r_cumulative">累计已完成募集金额</div>
+      </div>
+      <div class="investmentbox">
+        <div class="investmenticon"></div>
+        <div class="Investmentmoney">￥7,864,828.10<span>元</span></div>
+        <div class="i_cumulative">累计为投资者赚取收益</div>
+      </div>
+      <div class="peoplenamebox">
+        <div class="peoplenameicon"></div>
+        <div class="peoplename">6,482,810<span>人</span></div>
+        <div class="p_cumulative">累计已完成投资人数</div>
+      </div>
+      <div class="counterbox">
+        <div class="Countericon"></div>
+        <div class="Counterrate">100<span>%</span></div>
+        <div class="c_cumulative">到期本息兑付率</div>
+      </div>
+    </div>
+    <div class="contentbigbox">
+      <div class="contentleft">
+        <div class="financialproducts">理财产品</div>
+        <div class="arrangeleft">
+          <div class="box">
+            <div class="saleleft">
+              <div class="ticketname1">票票票8748572997&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>银行承兑汇票&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;募集成功当日起息</span></div>
+              <div class="ticketcontent">
+                <div class="yield">
+                  <div class="shouyiwords">预期年化收益率</div>
+                  <div class="yieldname">5.7<span>%</span></div>
+                </div>
+                <div class="financingmoney">
+                  <div class="rongwords">融资金额</div>
+                  <div class="financingname">500,000.00<span>元</span></div>
+                </div>
+                <div class="timelimit">
+                  <div class="timelimitwords">期限</div>
+                  <div class="timelimitname">98<span>天</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="saleright1">
+              <div class="saletime1">开售：&nbsp;04-27&nbsp;&nbsp;&nbsp;09:30</div>
+              <div class="saleicon1"></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="saleleft">
+              <div class="ticketname1">票票票8748572997&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>银行承兑汇票&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;募集成功当日起息</span></div>
+              <div class="ticketcontent">
+                <div class="yield">
+                  <div class="shouyiwords">预期年化收益率</div>
+                  <div class="yieldname">5.7<span>%</span></div>
+                </div>
+                <div class="financingmoney">
+                  <div class="rongwords">融资金额</div>
+                  <div class="financingname">610,000.00<span>元</span></div>
+                </div>
+                <div class="timelimit">
+                  <div class="timelimitwords">期限</div>
+                  <div class="timelimitname">100<span>天</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="saleright1">
+              <div class="saletime1">开售：&nbsp;04-27&nbsp;&nbsp;&nbsp;09:30</div>
+              <div class="saleicon1"></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="saleleft">
+              <div class="ticketname2">票票票8748572997&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>银行承兑汇票&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;募集成功当日起息</span></div>
+              <div class="ticketcontent">
+                <div class="yield">
+                  <div class="shouyiwords">预期年化收益率</div>
+                  <div class="yieldname">5.6<span>%</span></div>
+                </div>
+                <div class="financingmoney">
+                  <div class="rongwords">融资金额</div>
+                  <div class="financingname">540,000.00<span>元</span></div>
+                </div>
+                <div class="timelimit">
+                  <div class="timelimitwords">期限</div>
+                  <div class="timelimitname">98<span>天</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="saleright2">
+              <div style="display: inline-block;margin-right: 90px">
+                <div class="saletime2">售出：&nbsp;60%</div>
+                <div class="slidingblock"></div>
+              </div>
+              <a class="saleicon2" href="登录.html"></a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="saleleft">
+              <div class="ticketname2">票票票8748572997&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>银行承兑汇票&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;募集成功当日起息</span></div>
+              <div class="ticketcontent">
+                <div class="yield">
+                  <div class="shouyiwords">预期年化收益率</div>
+                  <div class="yieldname">5.7<span>%</span></div>
+                </div>
+                <div class="financingmoney">
+                  <div class="rongwords">融资金额</div>
+                  <div class="financingname">450,00.00<span>元</span></div>
+                </div>
+                <div class="timelimit">
+                  <div class="timelimitwords">期限</div>
+                  <div class="timelimitname">108<span>天</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="saleright2">
+              <div style="display: inline-block;margin-right: 90px">
+                <div class="saletime2">售出：&nbsp;60%</div>
+                <div class="slidingblock"></div>
+              </div>
+              <a class="saleicon2" href="登录.html"></a>
+            </div>
+          </div>
+          <a class="checkmone" href="产品列表（未登录）.html">查看更多理财产品</a>
+        </div>
+
+      </div>
+      <div class="contentright">
+        <div class="noticeboard">
+          <div class="dynamic">
+            <div class="company">公司动态</div>
+            <a class="mone" href="关于我们（公司动态）（已登录）.html">更多></a>
+          </div>
+          <div class="news">
+            <a class="dt1" href="关于我们（公司动态）（已登录）.html">银行卡消费积分活动开始了。</a>
+            <a class="dt2" href="关于我们（公司动态）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt3" href="关于我们（公司动态）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt4" href="关于我们（公司动态）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt5" href="关于我们（公司动态）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+          </div>
+        </div>
+        <div class="noticeboard1">
+          <div class="dynamic">
+            <div class="question">常见问题</div>
+            <a class="mone" href="帮助中心（名词解释）（已登录）.html">更多></a>
+          </div>
+          <div class="news">
+            <a class="dt1" href="帮助中心（名词解释）（已登录）.html">银行卡消费积分活动开始了。</a>
+            <a class="dt2" href="帮助中心（名词解释）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt3" href="帮助中心（名词解释）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt4" href="帮助中心（名词解释）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+            <a class="dt5" href="帮助中心（名词解释）（已登录）.html">新一期票据即将开售，稳赚保盈，利率高...</a>
+          </div>
+        </div>
+      </div>
+      <div class="whiteblock"></div>
+    </div>
+    <div class="footer"><!--底部-->
+      <div class="foot">
+        <div class="footleft">
+          <div class="supervision">
+            <div class="one">
+              <div class="fund">基金销售资格</div>
+              <a class="p_fund" href=""></a>
+            </div>
+            <div class="two">
+              <div class="check">监督机构</div>
+              <a class="p_Check" href=""></a>
+            </div>
+            <div class="three">
+              <div class="self">自律组织</div>
+              <a class="p_self" href=""></a>
+            </div>
+            <div class="four">
+              <div class="trust">可信网站</div>
+              <a class="p_trust" href=""></a>
+            </div>
+          </div>
+          <div class="words">咨询热线：0000-000000（工作时间9:00-18:00）</div>
+          <div class="tonglian">广东统联金融信息技术有限公司版权所有www.tonglian,com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：粤:ICP备14750086号</div>
+        </div>
+        <div class="footright">
+          <div class="concernweixin">
+            <div class="weixinicon">关注微信</div>
+            <div class="w_picture"></div>
+          </div>
+          <div class="concernweibo">
+            <div class="xinlangicon">关注微博</div>
+            <a class="x_picture" href=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</body>
+</html>
